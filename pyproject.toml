@@ -5,7 +5,9 @@ description = "Default template for PDM package"
 authors = [
     {name = "AutumnAurelium"},
 ]
-dependencies = []
+dependencies = [
+    "numpy>=2.1.1",
+]
 requires-python = ">=3.12"
 readme = "README.md"
 license = {text = "MIT"}
@@ -17,3 +19,10 @@ build-backend = "pdm.backend"
 
 [tool.pdm]
 distribution = true
+
+[tool.pdm.scripts]
+test = "pytest tests/"
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.3.3",
+]
